@@ -1,0 +1,58 @@
+body {
+    background: #222327;
+}
+
+.box {
+    width: 850px;
+    position: relative;
+    border-radius: 50px;
+    padding-top: 320px;
+    margin: 110px auto;
+    height: 100px;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.8) ;
+}
+
+.box > img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s;
+    width: 100%;
+    height: 420px;
+    border-radius: 50px;
+    object-fit: cover;
+    object-position: center;
+}
+.box input[name='animate']{
+    display: none;
+}
+
+.box label {
+    margin: 150px auto auto 95px;
+    border: 5px solid #fff;
+    float: left;
+    cursor: pointer;
+    transition: all 0.5s;
+    opacity: .6;
+    border-radius: 25px;
+}
+
+.box label img {
+    display: block;
+    border-radius: 25px;
+}
+
+.box input[name="animate"]:checked+label {
+    border-color: #000;
+    opacity: 1;
+}
+.box input[name='animate'] ~ img {
+    opacity: 0;
+    transform: scale(1.1);
+}
+.box input[name='animate']:checked+label+img{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
